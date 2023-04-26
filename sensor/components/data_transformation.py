@@ -2,7 +2,7 @@ from sensor.entity import artifact_entity,config_entity
 from sensor.exception import SensorException
 from sensor.logger import logging
 from typing import Optional
-from sklearn.preprocessing import Pipeline
+from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import LabelEncoder
 import os,sys 
 import pandas as pd
