@@ -1,4 +1,3 @@
-
 from sensor import utils
 from sensor.entity import config_entity
 from sensor.entity import artifact_entity
@@ -27,6 +26,7 @@ class DataIngestion:
                 collection_name=self.data_ingestion_config.collection_name)
 
             logging.info("Save data in feature store")
+
             #replace na with Nan
             df.replace(to_replace="na",value=np.NAN,inplace=True)
 
@@ -66,7 +66,3 @@ class DataIngestion:
 
         except Exception as e:
             raise SensorException(error_message=e, error_detail=sys)
-
-
-
-        
