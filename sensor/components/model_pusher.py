@@ -16,7 +16,7 @@ class ModelPusher:
             self.model_pusher_config=model_pusher_config
             self.data_transformation_artifact=data_transformation_artifact
             self.model_trainer_artifact=model_trainer_artifact
-            self.model_resolver=ModelResolver(model_resistry=self.model_pusher_config.saved_model_dir)
+            self.model_resolver=ModelResolver(model_registry=self.model_pusher_config.saved_model_dir)
         except Exception as e:
             raise SensorException(e,sys)
 
